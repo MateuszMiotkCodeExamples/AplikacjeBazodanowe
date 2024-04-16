@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista Użytkowników</title>
+</head>
+<body>
+<h1>Użytkownicy</h1>
+<ul>
+    <% if(users.length > 0){ %>
+        <% users.forEach(function(user) { %>
+            <li><%= user.name %></li>
+        <% }); %>
+    <% } else { %>
+        <li>Brak użytkowników do wyświetlenia.</li>
+    <% } %>
+</ul>
+</body>
+</html>
