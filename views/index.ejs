@@ -6,7 +6,13 @@
     <title>Users List</title>
 </head>
 <body>
-<h1>Users List</h1>
+<% if (userName && userName !== 'Nieznajomy') { %>
+    <h1>Witaj, <%= userName %>!</h1>
+    <a href="/logout">Wyloguj</a>
+<% } else { %>
+    <a href="/login">Logowanie</a>
+<% } %>
+<h2>Lista Użytkowników</h2>
 <ul>
     <% users.forEach(user => { %>
         <li><%= user.name %> - <%= user.age %> - <%= user.email %></li>
@@ -28,3 +34,4 @@
 
 </body>
 </html>
+
