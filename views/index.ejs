@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My App</title>
+</head>
+<body>
+<h1>Items</h1>
+<ul>
+    <% items.forEach(item => { %>
+        <li><%= item.name %> - <%= item.quantity %></li>
+    <% }) %>
+</ul>
+<form action="/items" method="POST">
+    <label>
+        <input type="text" name="name" placeholder="Item name" required>
+    </label>
+    <label>
+        <input type="number" name="quantity" placeholder="Quantity" required>
+    </label>
+    <button type="submit">Add Item</button>
+</form>
+</body>
+</html>
